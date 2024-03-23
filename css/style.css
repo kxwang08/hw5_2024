@@ -1,18 +1,23 @@
-/* Animate the logo with keyframes.  (Here is a keyframes reference.) It should start at a width of 25px and grow to 475px.  It should also start with an opacity of 0 and end with an opacity of 1. The animation should take 5 seconds and only happen when the page is loaded. */
-@keyframes grow {
-  0% {
-    width: 25px;
-    opacity: 0;
-  }
-  100% {
-    width: 475px;
-    opacity: 1;
-  }
-}
+/* Step 1: Animate the logo with keyframes.  (Here is a keyframes reference.) It should start at a width of 25px and grow to 475px.  It should also start with an opacity of 0 and end with an opacity of 1. The animation should take 5 seconds and only happen when the page is loaded. */
 
-/* Apply the animation to the logo */
-#logo {
-  animation: grow 5s ease-in-out forwards; /* Run animation once when page loads */
+/* Media query so that there's animation ONLY when user hasn't EXPLICITYLY disabled animations. */
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes grow {
+    0% {
+      width: 25px;
+      opacity: 0;
+    }
+    100% {
+      width: 475px;
+      opacity: 1;
+    }
+  }
+
+  /* Apply the animation to the logo */
+  #logo {
+    animation: grow 5s ease-in-out forwards; /* Run animation once when page loads */
+}
 }
 
 
@@ -137,6 +142,7 @@ body > header {
 }
 }
 
+
 /* Step 14: The logo should appear but not be animated if prefers-reduced-motion is selected in the accessibility preferences.  */
 @media (prefers-reduced-motion: reduce) {
   .logo {
@@ -172,7 +178,6 @@ body > header {
   .pricing {
     flex-direction: row;
     align-items: flex-end;
-    margin-bottom: 100px;
   }
   
   /* Step 19: Border and flex-basis for card elements */
