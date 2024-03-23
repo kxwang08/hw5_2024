@@ -21,7 +21,6 @@
 }
 
 
-
 /* Step 2: Add Poppins from Google Fonts. Use “concrete_seamless.png” as a background-image with a backup color of #f1f1f1.*/
 body{
   /* margin: 0;
@@ -79,21 +78,6 @@ a:link, a:visited{
   align-items: center;
 }
 
-/* .pricing{
-  display: flex;
-  flex-direction: wrap;
-  justify-content: center;
-  align-items: center;
-} */
-
-
-/* .pricing {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-} */
-
 
 /* Step 9 Style the images in the gallery class. These elements will have a solid 10px border with a color of #50C7C7, 10px margin on all four sides and a width of 300px.   */
 .gallery img {
@@ -137,8 +121,7 @@ body > header {
   position: sticky;
   top: 0;
   z-index: 1000; /* Ensure it stays on top of other content */
-  background-color: white; /* Adjust as needed */
-  /* Add any other styling you need for your header */
+  background-color: white;
 }
 }
 
